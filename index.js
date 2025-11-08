@@ -52,6 +52,14 @@ app.post("/api/success", (req, res) => {
   });
 });
 
+// ✅ Redirect farcaster.json ke hosted manifest
+app.get("/.well-known/farcaster.json", (req, res) => {
+  res.redirect(
+    307,
+    "https://api.farcaster.xyz/miniapps/hosted-manifest/019a650a-7277-b893-c179-bffea9b67359"
+  );
+});
+
 // root test
 app.get("/", (req, res) => {
   res.send("Wolfplet Farcaster MiniApp 🐺 interactive mint + share");
