@@ -12,7 +12,7 @@ const CHAIN_ID = "8453"; // Base mainnet
 // Default: halaman utama (awal)
 app.get("/api/metadata", (req, res) => {
   res.json({
-    title: "WolfNFT Mint",
+    title: "Wolfplet Mint",
     description: "Mint your Wolf NFT on Base for 0.1 USDC",
     image: "https://i.ibb.co/fGFG1Gz4/ezgif-com-animated-gif-maker.gif",
     actions: [
@@ -39,7 +39,7 @@ app.get("/api/metadata", (req, res) => {
 app.post("/api/success", (req, res) => {
   res.json({
     title: "Mint Successful 🎉",
-    description: "You just minted your WolfNFT on Base 🐺",
+    description: "You just minted your Wolfplet on Base 🐺",
     image: "https://i.ibb.co/fGFG1Gz4/ezgif-com-animated-gif-maker.gif",
     actions: [
       {
@@ -54,10 +54,10 @@ app.post("/api/success", (req, res) => {
 
 // root test
 app.get("/", (req, res) => {
-  res.send("WolfNFT Farcaster MiniApp 🐺 interactive mint + share");
+  res.send("Wolfplet Farcaster MiniApp 🐺 interactive mint + share");
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>
-  console.log(`WolfNFT MiniApp running on http://localhost:${PORT}`)
+  console.log(`Wolfplet MiniApp running on http://localhost:${PORT}`)
 );
