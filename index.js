@@ -15,7 +15,7 @@ app.get("/api/metadata", (req, res) => {
   res.json({
     title: "WolfNFT Mint",
     description: "Mint your Wolf NFT on Base for 0.1 USDC",
-    image: "https://i.ibb.co/f1CHTGK/wolf-preview.gif", // optional preview
+    image: "https://i.ibb.co/fGFG1Gz4/ezgif-com-animated-gif-maker.gif", // optional preview
     actions: [
       {
         label: "Mint 0.1 USDC",
