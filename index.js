@@ -65,7 +65,6 @@ app.get("/", (req, res) => {
   res.send("Wolfplet Farcaster MiniApp 🐺 interactive mint + share");
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () =>
-  console.log(`Wolfplet MiniApp running on http://localhost:${PORT}`)
-);
+// ✅ jangan pakai app.listen di Vercel
+export default app;
+
