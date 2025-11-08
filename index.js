@@ -9,7 +9,6 @@ app.use(bodyParser.json());
 const CONTRACT_ADDRESS = "0x8732a30ED4219a2593017E008294Af33B1B706D8";
 const CHAIN_ID = "8453"; // Base mainnet
 
-// Default: halaman utama (awal)
 app.get("/api/metadata", (req, res) => {
   res.json({
     title: "Wolfplet Mint",
@@ -35,7 +34,6 @@ app.get("/api/metadata", (req, res) => {
   });
 });
 
-// Setelah mint sukses → kirim metadata baru dengan tombol share
 app.post("/api/success", (req, res) => {
   res.json({
     title: "Mint Successful 🎉",
@@ -46,7 +44,7 @@ app.post("/api/success", (req, res) => {
         label: "Share mint",
         action: "post",
         postUrl:
-          "https://warpcast.com/~/compose?text=I%20just%20minted%20my%20WolfNFT%20on%20Base%20%F0%9F%90%BA%20join%20the%20pack"
+          "https://warpcast.com/~/compose?text=I%20just%20minted%20my%20Wolfplet%20NFT%20on%20Base%20%F0%9F%90%BA%20join%20the%20pack"
       }
     ]
   });
@@ -60,11 +58,9 @@ app.get("/.well-known/farcaster.json", (req, res) => {
   );
 });
 
-// root test
 app.get("/", (req, res) => {
   res.send("Wolfplet Farcaster MiniApp 🐺 interactive mint + share");
 });
 
-// ✅ jangan pakai app.listen di Vercel
 export default app;
 
